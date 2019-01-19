@@ -6,7 +6,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  background-color: #eee;
+  width: 100%;
+
+  .parent {
+    width: 100%;
+
+    .contained {
+      margin: 25px auto auto auto;
+      display: flex;
+      width: 75%;
+    }
+  }
+  }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

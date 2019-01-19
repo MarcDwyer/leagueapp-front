@@ -1,0 +1,17 @@
+.search-parent {
+    border: 1px solid transparent;
+
+form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        text-align: center;
+    }
+    input {
+        width: 425px;
+        margin-bottom: 25px;
+    }
+}
+}
