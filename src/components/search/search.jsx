@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { FormControl, ControlLabel } from 'react-bootstrap'
+import Results from '../results/results'
 import "./search_styles.scss"
 export default class Search extends Component {
     constructor(props) {
@@ -15,6 +16,7 @@ export default class Search extends Component {
         const { error } = this.state
         console.log(this.state)
         return (
+            <div className="topdog">
             <div className="parent search-parent">
             <div className="contained">
             <form
@@ -35,6 +37,8 @@ export default class Search extends Component {
                 </form>
             </div>
             </div>
+            <Results results={this.state.results} />
+            </div>
         )
     }
     handleSubmit = async (e) => {
@@ -43,7 +47,7 @@ export default class Search extends Component {
         try {
             const fetcher = await fetch(`/api/stats/${search}`)
             const data = await fetcher.json()
-            this.setState({results: data[0]})
+            this.setState({results: data})
         } catch(err) {
            this.setState({error: "No results, try again."}, () => {
                setTimeout(() => {
