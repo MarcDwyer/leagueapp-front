@@ -14,7 +14,7 @@ export default class Search extends Component {
 
     render() {
         const { error } = this.state
-        console.log(this.state)
+        console.log(this)
         return (
             <div className="topdog">
             <div className="parent search-parent">
